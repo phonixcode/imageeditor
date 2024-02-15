@@ -1,61 +1,72 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Image Editor Project Setup Guide
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+This guide will walk you through the process of cloning and setting up a Image Editor project on your local development environment.
 
-## About Laravel
+## Prerequisites
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Before you begin, make sure you have the following prerequisites installed on your computer:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- PHP
+- Composer
+- Git
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Step 1: Clone the Image Editor Project
 
-## Learning Laravel
+1. Open your terminal/command prompt.
+2. Navigate to the directory where you want to create your Laravel project.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+    ```shell
+    cd /path/to/your/directory
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. Run the following command to clone a image editor project from a Git repository (replace `project-name` with your desired project name):  
 
-## Laravel Sponsors
+   ```shell
+    git clone https://github.com/phonixcode/imageeditor.git
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Step 2: Install Dependencies
 
-### Premium Partners
+1. Change your working directory to the project folder:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+    ```shell
+    cd project-name
 
-## Contributing
+2. Run Composer to install Laravel's dependencies:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    ```shell
+    composer install
 
-## Code of Conduct
+## Step 3: Configure Environment Variables
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. Duplicate the `.env.example` file and rename it to `.env`:
 
-## Security Vulnerabilities
+    ```shell
+    cp .env.example .env`
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+2. Open the `.env` file and enter your `CLIPDROP_API_KEY`.
 
-## License
+## Step 4: Generate an Application Key
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Run the following command to generate a unique application key:
+
+     php artisan key:generate
+
+## Step 5: Start the Development Server
+
+    php artisan serve
+
+This will start the server at <http://localhost:8000> by default.
+
+## Step 6: Access Your Image Editor Application
+
+- Open a web browser and navigate to <http://localhost:8000> (or the URL shown in your terminal).
+- You should see the default Image Editor page, indicating that your project is set up successfully.
+
+## Additional Configuration (Optional)
+
+You can configure additional settings, such as setting up a virtual host, configuring your web server (e.g., Apache or Nginx), or adding more Laravel packages, as needed for your project.
+
+That's it! You've successfully cloned and set up a Image Editor project on your local development environment. You can now start building and working Image Editor application.
+
+### Troubleshooting
+
+If you encounter any issues during the setup process, you can refer to the <a href="https://laravel.com/docs/">Laravel documentation</a> for more information and troubleshooting tips.
