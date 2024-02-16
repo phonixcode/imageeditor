@@ -25,15 +25,6 @@
     <div class="app">
         <!-- begin app-wrap -->
         <div class="app-wrap">
-            <!-- begin pre-loader -->
-            <div class="loader">
-                <div class="h-100 d-flex justify-content-center">
-                    <div class="align-self-center">
-                        <img src="assets/img/loader/loader.svg" alt="loader">
-                    </div>
-                </div>
-            </div>
-            <!-- end pre-loader -->
 
             <!-- begin app-header -->
             <header class="app-header top-bar">
@@ -53,7 +44,28 @@
                                         Remove Background Image
                                     </a>
                                 </li>
+                                @auth
+                                <li class="nav-item">
+                                    <a href="{{ route('api.key.setting') }}" class="nav-link">
+                                        Api key Setting
+                                    </a>
+                                </li>
+                                @endauth
+
                             </ul>
+
+                            @auth
+                            <ul class="navbar-nav nav-right ml-auto">
+                                <li class="nav-item">
+                                    <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="nav-link">
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <form action="{{ route('logout') }}" method="post" class="d-none"
+                                        id="logout-form">@csrf</form>
+                            @endauth
 
                         </div>
                     </div>
