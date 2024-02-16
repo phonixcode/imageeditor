@@ -50,16 +50,28 @@ Run the following command to generate a unique application key:
 
      php artisan key:generate
 
-## Step 5: Start the Development Server
+## Step 5: Database
+
+1. Create a new database 
+2. Open the `.env` file and enter your `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`.
+
+Run the following command to generate the databse tables and seed data:
+
+     php artisan migrate:fresh --seed
+
+## Step 6: Start the Development Server
 
     php artisan serve
 
 This will start the server at <http://localhost:8000> by default.
 
-## Step 6: Access Your Image Editor Application
+## Step 7: Access Your Image Editor Application
 
 - Open a web browser and navigate to <http://localhost:8000> (or the URL shown in your terminal).
 - You should see the default Image Editor page, indicating that your project is set up successfully.
+- Open a web browser and navigate to <http://localhost:8000/login> to have access to the `CLIPDROP_API_KEY` page.
+     email: admin@admin.com
+     password: admin12345
 
 ## Additional Configuration (Optional)
 

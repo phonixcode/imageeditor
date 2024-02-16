@@ -36,6 +36,13 @@
                                     <div class="login p-50">
                                         <p>Welcome back, please login to your account.</p>
 
+                                        <p class="bg-dark">
+                                            <code>
+                                                email: admin@admin.com <br>
+                                                password: admin12345
+                                            </code>
+                                        </p>
+
                                         @if (session()->has('success'))
                                             <div class="alert alert-icon alert-inverse-success mt-5" role="alert">
                                                 <i class="fa fa-info-circle"></i> {{ session()->get('success') }}!
