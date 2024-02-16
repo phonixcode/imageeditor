@@ -2,6 +2,13 @@
 
 This guide will walk you through the process of cloning and setting up a Image Editor project on your local development environment.
 
+Demo
+
+- Open a web browser and navigate to <https://imageeditor.up.railway.app>.
+- Open a web browser and navigate to <https://imageeditor.up.railway.app/login> to have access to the `CLIPDROP_API_KEY` page.
+  - `email: admin@admin.com`
+  - `password: admin12345`
+
 ## Prerequisites
 
 Before you begin, make sure you have the following prerequisites installed on your computer:
