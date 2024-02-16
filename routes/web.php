@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\ImageEditorController;
@@ -38,3 +39,6 @@ Route::group(['middleware' => 'auth', 'preventBackHistory'], function () {
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 });
 
+Route::get('/linkstorage', function () {
+    Artisan::call('storage:link');
+});
