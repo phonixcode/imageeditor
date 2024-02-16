@@ -70,8 +70,8 @@ This will start the server at <http://localhost:8000> by default.
 - Open a web browser and navigate to <http://localhost:8000> (or the URL shown in your terminal).
 - You should see the default Image Editor page, indicating that your project is set up successfully.
 - Open a web browser and navigate to <http://localhost:8000/login> to have access to the `CLIPDROP_API_KEY` page.
-     email: admin@admin.com
-     password: admin12345
+     - `email: admin@admin.com`
+     - `password: admin12345`
 
 ## Additional Configuration (Optional)
 
